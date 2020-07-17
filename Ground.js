@@ -7,7 +7,9 @@ class Ground{
 
 	this.body = Bodies.rectangle(x, y, width, height, options);
     this.width = width;
-    this.height = height;
+	this.height = height;
+	
+	this.image=loadImage("sprites/base.png");
     
     World.add(world, this.body);
 
@@ -18,13 +20,10 @@ class Ground{
 
 	push();
 	
-	rectMode(CENTER);
+	imageMode(CENTER);
 
-	strokeWeight(2);
-	stroke("black")
-	fill("green");
 	
-    rect(pos.x, pos.y, this.width, this.height);
+    image(this.image,pos.x, pos.y, this.width, this.height);
 
 	pop();
 

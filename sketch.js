@@ -8,6 +8,11 @@ var pig1, pig2;
 
 var bird;
 var log1, log2, log3, log4;
+var bgImg
+
+function preload(){
+    bgImg=loadImage("sprites/bg.png");
+}
 
 function setup(){
     var canvas = createCanvas(1200,800);
@@ -33,7 +38,7 @@ function setup(){
 }
 
 function draw(){
-    background("turquoise");
+    background(bgImg);
     Engine.update(engine);
     ground.display();
     box1.display();
